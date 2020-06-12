@@ -14,7 +14,7 @@ classdef comp < section
         best % short-term effective width
         Alt % long-term effective area               
         Ast % short-term effective area               
-        D % total depth of composite section [in]
+        D_comp % total depth of composite section [in]
         yBst % distance to bottom of section from elastic neutral axis
         yTst % distance of E.N.A. to top of top flange
         yDst % distance of E.N.A. to top of deck
@@ -70,9 +70,9 @@ classdef comp < section
             Ast = obj.ts*obj.best;
 		end
 
-		function D = get.D(obj)
+		function D_comp = get.D_comp(obj)
 		% total depth of composite section
-            D = obj.d + obj.ts + obj.dh;
+            D_comp = obj.d + obj.ts + obj.dh;
 		end
 
 		function yBst = get.yBst(obj)
@@ -93,7 +93,7 @@ classdef comp < section
 
 		function yDst = get.yDst(obj)
 		% distance of E.N.A. to top of deck
-            yDst = obj.D - obj.yBst;
+            yDst = obj.D_comp - obj.yBst;
 		end
 
 		function yBlt = get.yBlt(obj)
@@ -114,7 +114,7 @@ classdef comp < section
 
 		function yDlt = get.yDlt(obj)
 		% distance of E.N.A. to top of deck
-            yDlt = obj.D - obj.yBlt;            
+            yDlt = obj.D_comp - obj.yBlt;            
 		end
 
 		function Ist = get.Ist(obj)

@@ -34,7 +34,7 @@ function [Mp, Dpst, Dcp, id] = getMp(r,s)
     bf_bot = s.bf_bot(1); % Width of bottom flange (tension flange)
     tw = s.tw; % Thickness of the web
     dweb = s.dw; % Depth of Web
-    D = s.D; % [inches] Total depth of composite section   
+    D = s.D_comp; % [inches] Total depth of composite section   
     be = s.be; % Effective width of concrete deck
     dh = s.dh; % Depth of huanch
 

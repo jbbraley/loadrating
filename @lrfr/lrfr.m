@@ -22,11 +22,14 @@ classdef lrfr < fileio
         Fn_Service2Neg %
         Vn % shear resistance
         Vp % plastic shear force
+        Dp % distance from the top of the concrete deck to the neutral axis of the composite section at the plastic moment (in.)
+        Dt % total depth of composite section
 	end
 
 	%% -- dependent properties -- %%
 	properties (Dependent)
-
+        LR_Strength1Pos % Strength 1 load rating
+        LR_Service2Pos  % Service 2 Load rating
 	end
 
 	%% -- developer properties -- %%
@@ -41,6 +44,7 @@ classdef lrfr < fileio
         end
 
 		%% -- dependent methods -- %%
+        
 
 	end
 

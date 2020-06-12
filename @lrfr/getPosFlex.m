@@ -22,7 +22,7 @@ function r = getPosFlex(r,s,d)
     Es = s.Es; % Young's Modulus [psi]   
     tw = s.tw; % Thickness of the web
     dw = s.dw; % Depth of Web
-    D = s.D; % [inches] Total depth of composite section   
+    D = s.D_comp; % [inches] Total depth of composite section   
     STnc = s.STnc(1); % [in^3] Non-composite elastic section modulus measured from top flange
     SBnc = s.SBnc(1); % [in^3] Non-composite elastic section modulus measured from bottom flange 
     STlt = s.STlt(1); % [in^3] Long term composite elastic section modulus measured from top flange
@@ -97,6 +97,8 @@ function r = getPosFlex(r,s,d)
     % Service II
     r.Fn_Service2Pos = 0.95*Fy;
    
+    r.Dp = Dp;
+    r.Dt = D;
 
 end
 
